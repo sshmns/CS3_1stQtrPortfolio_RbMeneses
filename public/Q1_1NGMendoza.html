@@ -23,9 +23,7 @@
         let maxAge = Number(document.getElementById("maxAge").value); // Get target max age from input
         let numPerDay = Number(document.getElementById("numPerDay").value); // Get number of snacks per day from input
         
-        if
-        
-        (age && maxAge && numPerDay) { // Check if all inputs are provided
+        if (age && maxAge && numPerDay) { // Check if all inputs are provided
             let totalItems = (maxAge - age) * 365 * numPerDay; // Calculate total items
             document.getElementById("result").innerText = `If you continue at this rate, you will consume approximately ${totalItems} items until age ${maxAge}.`;
         } else {
