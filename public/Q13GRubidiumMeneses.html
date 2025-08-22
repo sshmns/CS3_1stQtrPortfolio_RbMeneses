@@ -1,47 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Number Guessing</title>
-</head>
 <body>
 
-<h2 id="header2">Q1 3rd Graded Exercise</h2>
+   <h2 id="header2"> Q1 3rd Graded Exercise submitted by Victoria Sasha R. Meneses of Rubidium</h2>
+   <!-- Enter your HTML tags below  but before the opening script tag -->
 
-<p>Enter a number between 1 and 100:</p>
-<input type="number" id="userInput">
-<button onclick="checkIt()">Check</button>
+   <p>Guess the number : ****</p>
+   <p>The number is from 1 to 100</p>
 
-<p id="result"></p>
+   <label>Enter your guess : </label>
+   <input type="number" id="userInput">
+   <button onclick="checkIt()">Check It</button>
 
-<script>
-  // Generate random number between 1 and 100
-  let dNumber = Math.floor(Math.random() * 100) + 1;
+   <p id="result">Result:</p>
 
-  function checkIt() {
-    // Read input value
-    let userGuess = document.getElementById("userInput").value;
-    userGuess = parseInt(userGuess);
+    <script>
+       var dNumber = Math.floor(Math.random() * 100) + 1; // generates a number from 1 to 100 when the page loads
 
-    let message = "";
+        function checkIt() {
+            // Get user input
+            var userGuess = document.getElementById("userInput").value;
+            userGuess = parseInt(userGuess);
 
-    if (userGuess > dNumber) {
-      message = "Lower";
-    } else if (userGuess < dNumber) {
-      message = "Higher";
-    } else if (userGuess === dNumber) {
-      message = "You are correct!";
-    } else {
-      message = "Please enter a valid number.";
-    }
+            var message = "";
 
-    // Display result
-    document.getElementById("result").innerHTML = message;
+            if (userGuess > dNumber) {
+                message = "Result: Lower";
+            } else if (userGuess < dNumber) {
+                message = "Result: Higher";
+            } else if (userGuess === dNumber) {
+                message = "Result: You are correct!";
+            } else {
+                message = "Result: Please enter a valid number.";
+            }
 
-    // Change header2 content with name + section
-    document.getElementById("header2").innerHTML =
-      "Q1 3rd Graded Exercise submitted by Victoria Sasha R. Meneses of 9-Rubidium";
-  }
-</script>
+            // Display result
+            document.getElementById("result").innerHTML = message;
+
+            // Update header with name + section
+            document.getElementById("header2").innerHTML = 
+              "Q1 3rd Graded Exercise submitted by [Your Name] of [Your Section]";
+        }
+    </script>
 
 </body>
 </html>
+
