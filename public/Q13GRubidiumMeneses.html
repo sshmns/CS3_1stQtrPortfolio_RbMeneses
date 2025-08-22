@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Guessing</title>
+</head>
+<body>
+
+<h2 id="header2">Q1 3rd Graded Exercise</h2>
+
+<p>Enter a number between 1 and 100:</p>
+<input type="number" id="userInput">
+<button onclick="checkIt()">Check</button>
+
+<p id="result"></p>
+
+<script>
+  // Generate random number between 1 and 100
+  let dNumber = Math.floor(Math.random() * 100) + 1;
+
+  function checkIt() {
+    // Read input value
+    let userGuess = document.getElementById("userInput").value;
+    userGuess = parseInt(userGuess);
+
+    let message = "";
+
+    if (userGuess > dNumber) {
+      message = "Lower";
+    } else if (userGuess < dNumber) {
+      message = "Higher";
+    } else if (userGuess === dNumber) {
+      message = "You are correct!";
+    } else {
+      message = "Please enter a valid number.";
+    }
+
+    // Display result
+    document.getElementById("result").innerHTML = message;
+
+    // Change header2 content with name + section
+    document.getElementById("header2").innerHTML =
+      "Q1 3rd Graded Exercise submitted by Victoria Sasha R. Meneses of 9-Rubidium";
+  }
+</script>
+
+</body>
+</html>
